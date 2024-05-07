@@ -2,27 +2,41 @@
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
-    <title>我的 CARTO 地图</title>
+    <title>ELephant Migrantion Route Planner</title>
     <style>
         body, html {
             margin: 0;
             padding: 0;
             height: 100%;
+            font-family: Arial, sans-serif;
         }
         #header {
             background-color: #f8f8f8;
-            text-align: center;
-            padding: 20px;
-            font-size: 24px;
-            font-family: Arial, sans-serif;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 18px;
+        }
+        #header img {
+            height: 50px;
+            margin-right: 10px;
+        }
+        #header .menu {
+            margin-left: 10px;
+        }
+        #header .right-menu a {
+            margin-left: 20px;
+            cursor: pointer;
+            text-decoration: none;
             color: #333;
         }
         #map {
-            height: calc(100% - 60px); /* Adjust the 60px to increase or decrease the header height */
+            height: calc(100% - 50px); /* Adjust based on your header height */
             width: 100%;
         }
         iframe {
-            display: block; /* Removes the bottom margin/gap */
+            display: block;
             border: none;
             height: 100%;
             width: 100%;
@@ -30,10 +44,25 @@
     </style>
 </head>
 <body>
-    <div id="header">这是我的 CARTO 地图</div>
-    <div id="map">
-        <!-- 将这里的 iframe 源代码替换为从 CARTO 获取的代码 -->
-        <iframe src="https://clausa.app.carto.com/map/3c070a36-5dc6-4330-91cd-5f9ebc9b9bc5" allowfullscreen></iframe>
+    <div id="header">
+        <div class="left-menu">
+            <img src="logo.png" alt="Logo">
+            <span>Elephant Migration Route Planner</span>
+        </div>
+        <div class="right-menu">
+            <a onclick="loadMap('https://clausa.app.carto.com/map/3c070a36-5dc6-4330-91cd-5f9ebc9b9bc5')">Map 1</a>
+            <a onclick="loadMap('https://clausa.app.carto.com/map/3c070a36-5dc6-4330-91cd-5f9ebc9b9bc5')">Map 2</a>
+        </div>
     </div>
+    <div id="map">
+        <iframe id="cartoMap" src="https://clausa.app.carto.com/map/3c070a36-5dc6-4330-91cd-5f9ebc9b9bc5" allowfullscreen></iframe>
+    </div>
+
+    <script>
+        function loadMap(mapUrl) {
+            var iframe = document.getElementById('cartoMap');
+            iframe.src = mapUrl; // Update the src of the iframe
+        }
+    </script>
 </body>
 </html>

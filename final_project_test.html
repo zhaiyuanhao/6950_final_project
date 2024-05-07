@@ -3,9 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <title>我的 CARTO 地图</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+        #header {
+            background-color: #f8f8f8;
+            text-align: center;
+            padding: 20px;
+            font-size: 24px;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+        #map {
+            height: calc(100% - 60px); /* Adjust the 60px to increase or decrease the header height */
+            width: 100%;
+        }
+        iframe {
+            display: block; /* Removes the bottom margin/gap */
+            border: none;
+            height: 100%;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
-    <h1>这是我的 CARTO 地图</h1>
-    <iframe width="100%" height="100%" frameborder="0" src="https://clausa.app.carto.com/map/3c070a36-5dc6-4330-91cd-5f9ebc9b9bc5" allowfullscreen></iframe>
+    <div id="header">这是我的 CARTO 地图</div>
+    <div id="map">
+        <!-- 将这里的 iframe 源代码替换为从 CARTO 获取的代码 -->
+        <iframe src="https://clausa.app.carto.com/map/3c070a36-5dc6-4330-91cd-5f9ebc9b9bc5" allowfullscreen></iframe>
+    </div>
 </body>
 </html>

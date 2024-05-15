@@ -10,18 +10,23 @@ With the data warehouse, we can visualize the data through carto and present it 
 
 ## Data Collecting
 The Data we use here is collected from the National Geomatics Center of China. The data includes the Digital Elevation Model (DEM), City Border, Forest Resources, River System, and existing conservation areas of Yunnan Province, China.
+
 https://www.gscloud.cn/#page1/1
 
 ## Data Storage & Visualization
 For the Data Storage, I transformed the result data into a CSV file and stored the data in Google Cloud.
+
 With the Cloud Database, we can use Carto to visualize the spatial data and present it to the public with HTML web page.
 
 ## Final Project
 **Web Page:**
+
 https://zhaiyuanhao.github.io/6950_final_project/final_project_test.html
 
 **Detailed Technical Documents:**
+
 https://github.com/zhaiyuanhao/6950_final_project/blob/0f07bb9daab2e1a8bbaa3535cbce3d9cb9f5d610/MUSA%206950%20Final%20Project_Asian%20Elephants%20Migration%20Route%20Planner_Yuanhao%20Zhai.pdf
 
 **Presentation Video:**
+
 https://youtu.be/5rEfWzYwrOc

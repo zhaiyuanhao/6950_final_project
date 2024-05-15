@@ -10,6 +10,7 @@ With the data warehouse, we can visualize the data through carto and present it 
 
 ## Data Collecting
 The Data we use here is collected from the National Geomatics Center of China. The data includes the Digital Elevation Model (DEM), City Border, Forest Resources, River System, and existing conservation areas of Yunnan Province, China.
+https://www.gscloud.cn/#page1/1
 
 ## Data Storage & Visualization
 For the Data Storage, I transformed the result data into a CSV file and stored the data in Google Cloud.
